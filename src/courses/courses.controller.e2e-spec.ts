@@ -130,4 +130,13 @@ describe('CoursesController', () => {
       expect(res.body.tags[1].name).toEqual(updateData.tags[1]);
     });
   });
+
+  describe('DELETE /course/:id', () => {
+    it('should delete a course', async () => {
+      await request(app.getHttpServer())
+        .delete(`/courses/${courses[0].id}`)
+        .expect(204)
+        .expect({});
+    });
+  });
 });
