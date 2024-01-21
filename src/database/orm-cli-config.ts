@@ -16,7 +16,7 @@ export const dataSourceOptions: DataSourceOptions = {
   password: process.env.DB_PASS,
   database: process.env.DB_NAME,
   entities: [Course, Tag],
-  synchronize: true,
+  synchronize: false,
 };
 
 export const dataSource = new DataSource({
