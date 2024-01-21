@@ -25,7 +25,7 @@ describe('CoursesController', () => {
     synchronize: true,
   };
 
-  beforeEach(async () => {
+  beforeAll(async () => {
     module = await Test.createTestingModule({
       imports: [
         CoursesModule,
